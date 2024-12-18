@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #389cff;
+  padding: 20px;
+}
+
+.gallery-container {
+  text-align: center;
+  background-color: #b4e1f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.image-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-display img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-btn {
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: black;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.thumbnail-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  transform: scale(1.1);
+  border: 2px solid #007bff;
+}
+
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .image-display img {
+    height: auto; 
+  }
+
+  .nav-btn {
+    font-size: 1.2rem;
+    padding: 7px;
+    margin: 0;
+  }
+
+  .thumbnail {
+    width: 70px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .gallery-container {
+    padding: 10px;
+  }
+
+  .nav-btn {
+    font-size: 1rem;
+    padding: 5px 8px;
+    margin: 0 10px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+}
